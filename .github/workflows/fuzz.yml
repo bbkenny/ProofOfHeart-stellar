@@ -21,7 +21,7 @@ jobs:
         run: cargo fuzz run fuzz_contribute -- -max_total_time=60
       - name: Upload crash artifacts
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: fuzz-contribute-crashes
           path: fuzz/artifacts/fuzz_contribute/
